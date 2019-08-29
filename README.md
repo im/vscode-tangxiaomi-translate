@@ -1,0 +1,2 @@
+# vscode-translate
+google translate
