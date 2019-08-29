@@ -2,9 +2,9 @@
 	"name": "vscode-translate",
 	"displayName": "vscode-translate",
 	"description": "vscode google translate",
-    "version": "0.0.1",
-    "publisher": "tangxiaomi",
-    "icon": "images/icon.jpg",
+	"version": "0.0.2",
+	"publisher": "tangxiaomi",
+	"icon": "images/icon.jpg",
 	"engines": {
 		"vscode": "^1.37.0"
 	},
@@ -14,13 +14,15 @@
 	"activationEvents": [
 		"onCommand:extension.helloWorld"
 	],
-    "main": "./extension.js",
-    "repository": "https://github.com/im/vscode-translate.git",
+	"main": "./extension.js",
+	"repository": "https://github.com/im/vscode-translate.git",
 	"contributes": {
-		"commands": [{
-            "command": "extension.helloWorld",
-			"title": "Hello World"
-		}]
+		"commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "Hello World"
+			}
+		]
 	},
 	"scripts": {
 		"test": "node ./test/runTest.js"
