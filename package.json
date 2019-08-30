@@ -1,10 +1,14 @@
 {
-	"name": "vscode-translate",
-	"displayName": "vscode-translate",
+	"name": "tangxiaomi-translate",
+	"displayName": "tangxiaomi-translate",
 	"description": "vscode google translate",
 	"version": "0.0.2",
 	"publisher": "tangxiaomi",
-	"icon": "images/icon.jpg",
+    "icon": "images/icon.jpg",
+    "author": {
+        "name": "Tang Xiaomi",
+        "email": "tangxiaomiemail@gmail.com"
+    },
 	"engines": {
 		"vscode": "^1.37.0"
 	},
@@ -12,17 +16,11 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"*"
 	],
-	"main": "./extension.js",
-	"repository": "https://github.com/im/vscode-translate.git",
+	"main": "./src/extension.js",
+	"repository": "https://github.com/im/vscode-tangxiaomi-translate.git",
 	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			}
-		]
 	},
 	"scripts": {
 		"test": "node ./test/runTest.js"
@@ -37,5 +35,11 @@
 		"mocha": "^6.1.4",
 		"typescript": "^3.3.1",
 		"vscode-test": "^1.0.2"
+	},
+	"dependencies": {
+		"humanize-string": "^2.1.0",
+		"translation.js": "^0.7.9",
+		"vscode-languageclient": "^5.2.1",
+		"vscode-languageserver": "^5.2.1"
 	}
 }
