@@ -4,13 +4,13 @@
 	"description": "vscode google translate",
 	"version": "0.0.2",
 	"publisher": "tangxiaomi",
-    "icon": "images/icon.jpg",
-    "author": {
-        "name": "Tang Xiaomi",
-        "email": "tangxiaomiemail@gmail.com"
-    },
+	"icon": "images/icon.jpg",
+	"author": {
+		"name": "Tang Xiaomi",
+		"email": "tangxiaomiemail@gmail.com"
+	},
 	"engines": {
-		"vscode": "^1.37.0"
+		"vscode": "^1.2.0"
 	},
 	"categories": [
 		"Other"
@@ -20,8 +20,7 @@
 	],
 	"main": "./src/extension.js",
 	"repository": "https://github.com/im/vscode-tangxiaomi-translate.git",
-	"contributes": {
-	},
+	"contributes": {},
 	"scripts": {
 		"test": "node ./test/runTest.js"
 	},
@@ -29,7 +28,7 @@
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^5.2.6",
 		"@types/node": "^10.12.21",
-		"@types/vscode": "^1.37.0",
+		"@types/vscode": "^1.2.0",
 		"eslint": "^5.13.0",
 		"glob": "^7.1.4",
 		"mocha": "^6.1.4",
