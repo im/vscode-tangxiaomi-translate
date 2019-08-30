@@ -21,7 +21,7 @@
 		"翻訳"
 	],
 	"engines": {
-		"vscode": "^1.0.0"
+		"vscode": "^1.2.0"
 	},
 	"categories": [
 		"Other"
