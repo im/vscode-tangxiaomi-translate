@@ -2,7 +2,7 @@
 	"name": "tangxiaomi-translate",
 	"displayName": "tangxiaomi-translate",
 	"description": "vscode google translate",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "tangxiaomi",
 	"icon": "images/icon.jpg",
 	"author": {
@@ -37,7 +37,7 @@
 	},
 	"dependencies": {
 		"humanize-string": "^2.1.0",
-		"translation.js": "^0.7.9",
+		"translation-api": "^1.0.1",
 		"vscode-languageclient": "^5.2.1",
 		"vscode-languageserver": "^5.2.1"
 	}

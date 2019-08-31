@@ -1,5 +1,6 @@
 const humanizeString = require('humanize-string');
-const { youdao, baidu, google } = require('translation.js');
+const { youdao, baidu, google } = require('translation-api');
+// const { env, Position, window } = require('vscode');
 
 function Translate (documents, connection) {
     this._connection = connection
@@ -17,8 +18,10 @@ Translate.prototype.getText = async function (textDocumentPosition) {
         } catch(e) {
             console.log(e)
         }
+        // global.translateProxyUrl = 'http://www.baidu.com'
+        // console.log(env)
         if (targetLanguageComment) {
-            contents.push(`[Tangxiaomi Translate]    [Google](${targetLanguageComment.link})`)
+            contents.push(`![](https://avatars3.githubusercontent.com/u/12029165?s=460&v=4)[Tangxiaomi Translate]    [Google](${targetLanguageComment.link})`)
             contents.push(`${block.comment} =>`)
             contents.push(targetLanguageComment.result)
             contents.push(' ')
