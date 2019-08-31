@@ -3,9 +3,10 @@ const { youdao, baidu, google } = require('translation-api');
 const getLink = require('../utils/link');
 const { translateLink } = require('../utils/github');
 
-function Translate (documents, connection) {
+function Translate (documents, connection, params) {
     this._connection = connection
     this._documents = documents
+    global.translateProxyUrl = params.initializationOptions.proxyUrl || ''
 }
 
 
@@ -20,7 +21,7 @@ Translate.prototype.getText = async function (textDocumentPosition) {
         } catch(e) {
             console.log(e)
         }
-        if (!targetLanguageComment) {
+        if (targetLanguageComment) {
             contents.push(`${translateLink('google', targetLanguageComment.link)}`)
             contents.push(`${block.comment} => ${targetLanguageComment.result}`)
             contents.push(' ')

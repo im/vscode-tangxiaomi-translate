@@ -15,7 +15,7 @@ let translate = null
 
 connection.onInitialize((params) => {
     let capabilities = params.capabilities;
-    translate = new Translate(documents, connection)
+    translate = new Translate(documents, connection, params)
     return {
 		capabilities: {
 			hoverProvider: true,

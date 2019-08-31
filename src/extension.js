@@ -2,14 +2,11 @@ const { env, Position, window, workspace } = require('vscode');
 
 const { LanguageClient, TransportKind } = require('vscode-languageclient')
 const path = require('path');
+const { proxyUrl } = require('./configuration');
 let client = null
 
 async function activate(context) {
-    console.log('========: ', process.env.HOME);
-    console.log('context: ', context);
-    console.log('workspace: ', workspace);
-
-
+    
     let serverModule = context.asAbsolutePath(path.join('src', 'server', 'index.js'))
 
     let debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] }
@@ -27,7 +24,8 @@ async function activate(context) {
     let clientOptions = {
         revealOutputChannelOn: 4,
         initializationOptions: {
-            appRoot: env.appRoot, userLanguage
+            appRoot: env.appRoot, userLanguage,
+            proxyUrl: proxyUrl
         },
         documentSelector: ['*'],
         synchronize: {
