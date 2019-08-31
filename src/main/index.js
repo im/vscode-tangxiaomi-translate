@@ -20,8 +20,13 @@ Translate.prototype.getText = async function (textDocumentPosition) {
         }
         // global.translateProxyUrl = 'http://www.baidu.com'
         // console.log(env)
+        // 
+        // [![alt text](http://path/to/img.jpg "title")](你的链接地址)
+        
+        // const str = '![](https://raw.githubusercontent.com/im/vscode-tangxiaomi-translate/master/images/google.jpg){:height="20px" width="20px"}'
+        const str = '[![test image size](https://raw.githubusercontent.com/im/vscode-tangxiaomi-translate/master/images/google.jpg)](https://raw.githubusercontent.com/im/vscode-tangxiaomi-translate/master/images/google.jpg)'
         if (targetLanguageComment) {
-            contents.push(`![](https://avatars3.githubusercontent.com/u/12029165?s=460&v=4)[Tangxiaomi Translate]    [Google](${targetLanguageComment.link})`)
+            contents.push(`${str} [Tangxiaomi Translate]    [Google](${targetLanguageComment.link})`)
             contents.push(`${block.comment} =>`)
             contents.push(targetLanguageComment.result)
             contents.push(' ')
