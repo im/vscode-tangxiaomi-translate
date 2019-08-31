@@ -2,7 +2,7 @@
 	"name": "tangxiaomi-translate",
 	"displayName": "tangxiaomi-translate",
 	"description": "vscode google translate",
-	"version": "0.0.4",
+	"version": "1.0.4",
 	"publisher": "tangxiaomi",
 	"icon": "images/icon.jpg",
 	"author": {
