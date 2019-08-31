@@ -2,7 +2,7 @@
 	"name": "tangxiaomi-translate",
 	"displayName": "tangxiaomi-translate",
 	"description": "vscode google translate",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"publisher": "tangxiaomi",
 	"icon": "images/icon.jpg",
 	"author": {
@@ -21,18 +21,18 @@
 	"main": "./src/extension.js",
 	"repository": "https://github.com/im/vscode-tangxiaomi-translate.git",
 	"contributes": {
-        "configuration": {
-            "type": "object",
-            "title": "tangxiaomi translate",
-            "properties": {
-                "tangxiaomiTranslate.proxy": {
-                    "type": "string",
-                    "default": null,
-                    "markdownDescription": "添加代理"
-                }
-            }
-        }
-    },
+		"configuration": {
+			"type": "object",
+			"title": "tangxiaomi translate",
+			"properties": {
+				"tangxiaomiTranslate.proxy": {
+					"type": "string",
+					"default": null,
+					"markdownDescription": "添加代理"
+				}
+			}
+		}
+	},
 	"scripts": {
 		"test": "node ./test/runTest.js"
 	},
