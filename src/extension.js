@@ -1,8 +1,8 @@
-const { env, Position, window, workspace } = require('vscode');
+const { env, Position, window, workspace, commands } = require('vscode');
 
 const { LanguageClient, TransportKind } = require('vscode-languageclient')
 const path = require('path');
-const { proxyUrl } = require('./configuration');
+const { translateServerSelect } = require('./configuration');
 let client = null
 
 async function activate(context) {
@@ -24,8 +24,7 @@ async function activate(context) {
     let clientOptions = {
         revealOutputChannelOn: 4,
         initializationOptions: {
-            appRoot: env.appRoot, userLanguage,
-            proxyUrl: proxyUrl
+            appRoot: env.appRoot, userLanguage
         },
         documentSelector: ['*'],
         synchronize: {
@@ -61,11 +60,14 @@ async function activate(context) {
         }
         return null
     });
+
+    // 注册更改目标语言命令
+    const disposable = context.subscriptions.push(commands.registerCommand('tangxiaomiTranslate.select', translateServerSelect));
     // let disposable = commands.registerCommand('extension.helloWorld', function () {
     // 	window.showInformationMessage('Hello World!');
     // });
 
-    // context.subscriptions.push(disposable);
+    context.subscriptions.push(disposable);
 }
 exports.activate = activate;
 

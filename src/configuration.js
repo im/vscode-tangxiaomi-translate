@@ -2,10 +2,30 @@
 const { env, Position, window, workspace } = require('vscode');
 
 
-const config = workspace.getConfiguration('tangxiaomiTranslate')
+const configuration = workspace.getConfiguration('tangxiaomiTranslate')
+
+const translateServers = [
+    ['google', '谷歌'],
+    ['youdao', '有道'],
+    ['baidu', '百度']
+]
+
+async function translateServerSelect () {
+    let res = await window.showQuickPick(translateServers.map(item => item[1]), {
+        placeHolder: '请选择翻译服务'
+    });
+    let target = translateServers.find(item => item[1] === res);
+    console.log('target: ', target);
+    if (target) {
+        await configuration.update('translateServes', target[0]);
+        console.log(configuration.translateServes)
+    }
+}
 
 module.exports = {
-    proxyUrl: config.proxy
+    proxyUrl: configuration.proxy,
+    translateServerSelect,
+    configuration
 }
 
 // // TODO 临时仅支持这部分语言
