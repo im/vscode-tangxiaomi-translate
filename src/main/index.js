@@ -24,7 +24,7 @@ Translate.prototype.getText = async function (textDocumentPosition) {
         // [![alt text](http://path/to/img.jpg "title")](你的链接地址)
         
         // const str = '![](https://raw.githubusercontent.com/im/vscode-tangxiaomi-translate/master/images/google.jpg){:height="20px" width="20px"}'
-        const str = '[![test image size](https://raw.githubusercontent.com/im/vscode-tangxiaomi-translate/master/images/google.jpg)](https://raw.githubusercontent.com/im/vscode-tangxiaomi-translate/master/images/google.jpg)'
+        const str = '[![test image size](https://raw.githubusercontent.com/im/vscode-tangxiaomi-translate/master/images/google%20(1).jpg)](https://raw.githubusercontent.com/im/vscode-tangxiaomi-translate/master/images/google.jpg)'
         if (targetLanguageComment) {
             contents.push(`${str} [Tangxiaomi Translate]    [Google](${targetLanguageComment.link})`)
             contents.push(`${block.comment} =>`)
