@@ -2,7 +2,7 @@
 	"name": "tangxiaomi-translate",
 	"displayName": "tangxiaomi-translate",
 	"description": "vscode google translate",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"publisher": "tangxiaomi",
 	"icon": "images/icon.jpg",
 	"author": {
@@ -21,13 +21,13 @@
 	"main": "./src/extension.js",
 	"repository": "https://github.com/im/vscode-tangxiaomi-translate.git",
 	"contributes": {
-        "commands": [
-            {
-                "command": "tangxiaomiTranslate.select",
-                "title": "选择翻译服务",
-                "category": "Tangxiaomi Translate"
-            }
-        ],
+		"commands": [
+			{
+				"command": "tangxiaomiTranslate.select",
+				"title": "选择翻译服务",
+				"category": "Tangxiaomi Translate"
+			}
+		],
 		"configuration": {
 			"type": "object",
 			"title": "tangxiaomi translate",
@@ -36,21 +36,21 @@
 					"type": "string",
 					"default": null,
 					"markdownDescription": "添加代理"
-                },
-                "tangxiaomiTranslate.translateServes": {
-                    "type": "string",
-                    "enum": [
-                        "google",
-                        "youdao",
-                        "baidu"
-                    ],
-                    "enumDescriptions": [
-                        "谷歌",
-                        "有道",
-                        "百度"
-                    ],
-                    "description": "翻译服务"
-                }
+				},
+				"tangxiaomiTranslate.translateServes": {
+					"type": "string",
+					"enum": [
+						"google",
+						"youdao",
+						"baidu"
+					],
+					"enumDescriptions": [
+						"谷歌",
+						"有道",
+						"百度"
+					],
+					"description": "翻译服务"
+				}
 			}
 		}
 	},
